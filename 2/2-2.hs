@@ -8,6 +8,7 @@ member x (Node a y b)
     | otherwise = True
 
 member2 :: Ord a => a -> Tree a -> Tree a -> Bool
+member2 _ Nil Nil = False
 member2 x Nil (Node _ v _) = x == v
 member2 x n@(Node l y r) v
     | x <= y = member2 x l n

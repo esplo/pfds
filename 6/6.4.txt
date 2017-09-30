@@ -1,0 +1,2 @@
+merge, deleteMinはもともとO(log(n))
+$tsを進行させるのは、最悪でもO(log(n))

@@ -34,6 +34,7 @@ fromList xs = foldl (flip insert) E xs
 
 sortTree :: Ord a => Tree a -> [a]
 sortTree E = []
+-- ++が計算量的に怪しければ書き換える
 sortTree (T a x b) = sortTree a ++ [x] ++ sortTree b
 
 makeAndSort :: Ord a => [a] -> [a]

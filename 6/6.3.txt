@@ -1,0 +1,23 @@
+# findMin
+
+ポテンシャルは変化しない。
+完全コストはremoveMinTreeと同様でlog(n)のまま。
+
+# deleteMin
+
+removeMinTree + merge なので、両方O(log(n))ならこれもO(log(n))
+
+# merge
+
+merge対象のポテンシャルをそれぞれ Z(n1), Z(n2), および n1 + n2 = n と置く。
+
+初期ポテンシャル: Z(n1) + Z(n2)
+
+同じランクが無い場合のマージ後のポテンシャル: Z(n1) + Z(n2) - log(n)
+ポテンシャルの変化は -log(n) となり、
+償却コストは log(n) - (-log(n)) = 2*log(n)
+よって O(log(n))
+
+同じランクがある場合のマージ後のポテンシャル:
+linkがk回発生したとすると、 Z(n1) + Z(n2) - log(n) + k
+同様に償却コストは log(n) - k となり、k <= log(n) より、O(log(n))

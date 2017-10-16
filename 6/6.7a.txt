@@ -1,0 +1,27 @@
+add
+
+D(i) < min(2i, k)
+
+log(n) = k
+
+非共有コストは1
+共有コスト
+
+addSegを考える
+
+force segsにより、log(n)
+
+k回mrgが発生する => 先頭k個のセグメントに1ずつ負債を負わせる。
+
+サイズmのmrg => 2mステップ
+d(i) = i^2 steps の負債
+
+
+最悪はk回
+
+
+
+
+sort
+内部でforce segsを呼んでおり、これを進行させるのにO(n) (=追加した分)かかる
+mrgAllにもO(n)かかるため、全体でO(n)

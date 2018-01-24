@@ -1,0 +1,22 @@
+# c=4の方が良い
+
+cons
+cons (回転)
+の後、下を繰り返す
+cons
+cons
+cons
+cons
+tail
+tail
+tail
+tail
+
+# c=2の方が良い
+
+cons
+cons
+...
+cons
+
+(reverseのコストが低くなる)

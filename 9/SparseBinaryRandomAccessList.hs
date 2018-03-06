@@ -26,7 +26,7 @@ module SparseBinaryRandomAccessList where
         del a@(Leaf _) = (a, [])
         del (Node _ l r) = let
             (t1, t2) = del l
-            in (t1, t2 ++ [r])
+            in (t1, t2 ++ [r])  -- ここの++は引数に与えて再帰することで:になる。補助関数delも不要
   
     instance RandomAccessList BinaryList where
       empty = BL []

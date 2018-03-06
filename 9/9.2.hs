@@ -1,6 +1,9 @@
 import BinaryRandomAccessList
 import RandomAccessList
 
+-- これだとctreeが毎回logxかかるので、logn*logxかかる
+-- 小さい桁から作り、作った二分木を次に渡すループを書く必要がある
+
 create :: Int -> a -> BinaryList a
 create 0 _ = BL []
 create n x = BL (reverse (make n (lookupLargest 1)))

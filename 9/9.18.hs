@@ -46,20 +46,10 @@ instance RandomAccessList (RList a) where
   lookup :: Int -> RList a -> a
   lookup i [] = error "Subscript"
   lookup i xs = lookupTree i xs
-  -- lookup i (f1@(x:_) : xs) = if i < fstSize
-  --   then lookupTree i f1
-  --   else lookup (i - fstSize) xs
-  --   where
-  --     fstSize = length f1 * size x
 
   update :: Int -> a -> RList a -> RList a
   update i _ [] = error "Subscript"
   update i v xs = updateTree i v xs
-  -- update i v (f1@(x :_) : xs) = if i < fstSize
-  --   then updateTree i v f1 : xs
-  --   else f1 : update (i - fstSize) v xs
-  --   where
-  --     fstSize = length f1 * size x
 
 -- helper functions
 rank :: Tree a -> Int

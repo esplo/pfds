@@ -1,0 +1,12 @@
+1-1. snocにより追加された時点で lenr <= lenfm
+checkQ
+-> checkF
+-> Q qを作って終わり
+
+1-2.  snocにより追加された時点で lenr > lenfm
+checkQ
+-> checkF
+-> snoc (m, $rev r)
+-> if m = E -> fin
+   else checkQ
+
